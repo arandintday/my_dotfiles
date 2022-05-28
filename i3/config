@@ -116,10 +116,10 @@ set $ws3 "Browser"
 set $ws4 "Code"
 set $ws5 "IRC"
 set $ws6 "MusicPlayer"
-set $ws7 "Others"
-set $ws8 "Others"
-set $ws9 "Others"
-set $ws10 "Others"
+set $ws7 "Workbench_1"
+set $ws8 "Workbench_2"
+set $ws9 "Workbench_3"
+set $ws10 "Workbench_4"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -196,14 +196,14 @@ gaps bottom 10
 for_window [class=".*"] border pixel 0
 #gaps outer all plus 5
 bindsym Print exec flameshot full
-
+bindsym Print+g exec flameshot gui
 exec feh --bg-scale $HOME/wallpaper.png
 exec fcitx5
 exec nmtui
-exec picom
+exec picom --config $HOME/.config/picom/picom.conf
 exec i3-sensible-terminal
-assign [class="Nautilus"] $ws2
-exec nautilus
+assign [class="Thunar"] $ws2
+exec thunar
 assign [class="Chromium"] $ws3
 exec chromium
 assign [class="Code"] $ws4
