@@ -196,22 +196,23 @@ gaps bottom 10
 for_window [class=".*"] border pixel 0
 #gaps outer all plus 5
 bindsym Print exec flameshot full
-bindsym Print+g exec flameshot gui
-exec feh --bg-scale $HOME/wallpaper.png
+bindsym $mod+p exec flameshot gui
+exec feh --bg-scale $HOME/wallpaper.jpg
 exec fcitx5
 exec nmtui
-exec picom --config $HOME/.config/picom/picom.conf
+exec blueberry-tray
+exec picom
 exec i3-sensible-terminal
 assign [class="Thunar"] $ws2
 exec thunar
-assign [class="Chromium"] $ws3
-exec chromium
+assign [class="Google-chrome"] $ws3
+exec google-chrome-stable
 assign [class="Code"] $ws4
 exec code
 assign [class="TelegramDesktop"] $ws5
 exec telegram-desktop
 assign [class="electron-netease-cloud-music"] $ws6
-exec /opt/electron-netease-cloud-music/usr/bin/electron-netease-cloud-music %U
+exec electron-netease-cloud-music
 
 
 
